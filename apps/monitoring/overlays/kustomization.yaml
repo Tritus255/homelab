@@ -4,12 +4,12 @@ kind: Kustomization
 namespace: monitoring
 
 resources:
-  - ../../base
+  - ../base
 
 secretGenerator:
   - name: grafana-secrets
     literals:
       - admin-password=grafana
 
-patchesStrategicMerge:
+patches:
   - config-patch.yaml
