@@ -9,8 +9,8 @@ spec:
       containers:
       - name: grafana
         env:
-        - name: GF_SERVER_ROOT_URL
-          value: "http://192.168.0.132/grafana"  # Change to your node IP
+        # - name: GF_SERVER_ROOT_URL
+        #   value: "http://192.168.0.132/grafana"  # Change to your node IP
         - name: GF_SECURITY_ADMIN_USER
           value: "admin"
         - name: GF_SECURITY_ADMIN_PASSWORD
@@ -18,7 +18,7 @@ spec:
             secretKeyRef:
               name: grafana-secrets
               key: admin-password
-        - name: GF_SERVER_SERVE_FROM_SUB_PATH
-          value: "true"
+        # - name: GF_SERVER_SERVE_FROM_SUB_PATH
+        #   value: "true"
         - name: GF_INSTALL_PLUGINS
           value: "grafana-clock-panel,grafana-simple-json-datasource,grafana-piechart-panel"
