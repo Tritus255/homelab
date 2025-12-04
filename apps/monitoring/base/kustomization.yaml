@@ -16,7 +16,6 @@ resources:
   - prometheus-ingress.yaml
   - grafana-ingress.yaml
   - prometheus-rbac.yaml
-  - middlewares.yaml
 
 labels:
   - pairs:
