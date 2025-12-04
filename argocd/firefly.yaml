@@ -10,10 +10,10 @@ spec:
   source:
     repoURL: https://github.com/Tritus255/homelab.git
     targetRevision: main
-    path: apps/firefly-iii/overlays/production
+    path: apps/firefly/base
   destination:
     server: https://kubernetes.default.svc
-    namespace: firefly-iii
+    namespace: firefly
   syncPolicy:
     automated:
       prune: true
