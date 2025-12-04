@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: firefly-iii
+  name: firefly
   labels:
-    name: firefly-iii
-    app.kubernetes.io/name: firefly-iii
+    name: firefly
+    app.kubernetes.io/name: firefly

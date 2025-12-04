@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: firefly-iii
-  namespace: firefly-iii
+  name: firefly
+  namespace: firefly
 spec:
   replicas: 1
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: firefly-iii
+      app: firefly
   template:
     metadata:
       labels:
-        app: firefly-iii
+        app: firefly
     spec:
       initContainers:
       - name: wait-for-db
         image: busybox:1.36
         command: ['sh', '-c', 'until nc -z postgres 5432; do echo waiting for postgres; sleep 2; done;']
       containers:
-      - name: firefly-iii
+      - name: firefly
         image: fireflyiii/core:latest
         ports:
         - containerPort: 8080

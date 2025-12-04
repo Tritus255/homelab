@@ -2,14 +2,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: firefly-iii
-  namespace: firefly-iii
+  name: firefly
+  namespace: firefly
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
     # Use PathPrefix matching without hostname
     traefik.ingress.kubernetes.io/router.rule: PathPrefix(`/firefly`)
     # Strip the /firefly prefix before sending to backend
-    traefik.ingress.kubernetes.io/router.middlewares: firefly-iii-stripprefix@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: firefly-stripprefix@kubernetescrd
 spec:
   ingressClassName: traefik
   rules:
@@ -19,6 +19,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: firefly-iii
+            name: firefly
             port:
               number: 8080
