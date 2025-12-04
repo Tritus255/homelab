@@ -11,5 +11,8 @@ secretGenerator:
     literals:
       - admin-password=grafana
 
-patches:
-  - config-patch.yaml
+patches: 
+  - target:
+      kind: Deployment
+      name: grafana
+    path: config-patch.yaml
