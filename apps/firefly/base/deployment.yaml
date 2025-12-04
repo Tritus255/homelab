@@ -36,8 +36,10 @@ spec:
             secretKeyRef:
               name: firefly-secrets
               key: db-password
+        - name: DB_CONNECTION
+          value: "pgsql"      
         - name: APP_URL
-          value: "https://firefly.yourdomain.com"  # Change this
+          value: "https://192.168.0.132/firefly"  # Change this to your Firefly-III URL "https://firefly.yourdomain.com"  # Change this
         - name: SITE_OWNER
           value: "admin@yourdomain.com"  # Change this
         envFrom:
