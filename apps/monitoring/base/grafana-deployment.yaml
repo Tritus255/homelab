@@ -34,7 +34,7 @@ spec:
               name: grafana-secrets
               key: admin-password
         - name: GF_SERVER_ROOT_URL
-          value: "http://YOUR_NODE_IP/grafana"
+          value: "http://192.168.0.132/grafana"
         - name: GF_SERVER_SERVE_FROM_SUB_PATH
           value: "true"
         - name: GF_INSTALL_PLUGINS
