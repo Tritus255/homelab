@@ -7,5 +7,6 @@ resources:
   - rbac.yaml
   - deployment.yaml
   - service.yaml
+  - ingressclass.yaml
 
 namespace: traefik

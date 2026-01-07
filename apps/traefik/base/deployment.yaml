@@ -26,6 +26,7 @@ spec:
             - "--entrypoints.web.Address=:80"
             - "--entrypoints.websecure.Address=:443"
             - "--providers.kubernetesingress"
+            - "--providers.kubernetesingress.ingressclass=traefik"
           ports:
             - name: web
               containerPort: 80
