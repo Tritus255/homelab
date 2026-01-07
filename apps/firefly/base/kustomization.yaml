@@ -11,8 +11,8 @@ resources:
   - pvc.yaml
   - deployment.yaml
   - service.yaml
+  - secrets.yaml
   - ingress.yaml
-  - middleware.yaml
 
 configMapGenerator:
   - name: firefly-config
