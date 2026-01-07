@@ -6,8 +6,6 @@ metadata:
   namespace: firefly
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
-    # Use PathPrefix matching without hostname
-    traefik.ingress.kubernetes.io/router.rule: PathPrefix(`/firefly`)
     # Strip the /firefly prefix before sending to backend
     traefik.ingress.kubernetes.io/router.middlewares: firefly-stripprefix@kubernetescrd
 spec:
